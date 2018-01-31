@@ -8,7 +8,12 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "e2e-nightwatch": "npm run e2e-compile && nightwatch",
+    "e2e-setup": "npm run e2e-compile && npm run e2e-download-selenium",
+    "e2e-compile": "cd e2e-nightwatch && rm -rf dist && tsc -p tsconfig.json",
+    "e2e-watch": "cd e2e-nightwatch && tsc -p tsconfig.json -w",
+    "e2e-download-selenium": "node e2e-nightwatch/dist/install-selenium.js"
   },
   "private": true,
   "dependencies": {
@@ -41,8 +46,9 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
+    "selenium-download": "^2.0.11",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.5.3"
+    "typescript": "~2.6.2"
   }
 }
