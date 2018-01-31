@@ -1,0 +1,8 @@
+# selenium jar and chrome driver
+bin
+
+# js files for e2e
+dist
+
+# nightwatch report result file
+reports
