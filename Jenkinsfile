@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+      nodejs '7.6.0'
+    }
+
     stages {
         stage('Build') {
             steps {
