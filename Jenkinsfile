@@ -1,11 +1,21 @@
-#!groovy
+pipeline {
+    agent any
 
-node('master') {
-    stage('Checkout') {
-        echo 'Code checkout'
-    }
-    
-    stage('Run tests') {
-        echo 'Running tests'
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
 }
