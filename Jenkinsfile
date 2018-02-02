@@ -4,7 +4,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo "branch: ${env.BRANCH_NAME}"
+                sh '''
+                  figlet building...
+                  pwd
+                  ls -l
+                  which node
+                  which npm
+                  node --version
+                  npm --version
+                  npm install
+                  npm list
+                '''
             }
         }
         stage('Test') {
