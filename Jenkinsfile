@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh 'ng test'
             }
         }
         stage('Deploy') {
@@ -31,5 +31,12 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+    }
+
+    post {
+      always {
+        sh 'docker-compose down --remove-orphans --volumes'
+        cleanWs()
+      }
     }
 }
