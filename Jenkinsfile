@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'ng test'
+                sh 'ng test --single-run true'
             }
         }
         stage('Deploy') {
