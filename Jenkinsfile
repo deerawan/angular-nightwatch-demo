@@ -6,7 +6,6 @@ pipeline {
             steps {
                 echo "branch: ${env.BRANCH_NAME}"
                 sh '''
-                  figlet building...
                   pwd
                   ls -l
                   which node
