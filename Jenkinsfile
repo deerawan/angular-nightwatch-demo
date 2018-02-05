@@ -14,6 +14,7 @@ pipeline {
         stage('Test') {
           steps {
             sh 'npm run e2e-setup'
+            sh 'npm run e2e-nightwatch'
           }
         }
     }
