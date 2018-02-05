@@ -1,9 +1,5 @@
 pipeline {
-    agent any
-
-    tools {
-      nodejs '7.6.0'
-    }
+    agent { dockerfile true }
 
     stages {
         stage('Build') {

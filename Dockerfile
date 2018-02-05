@@ -1,1 +1,1 @@
-FROM selenium/standalone-chrome:3.1.0
+FROM node:7-alpine
