@@ -5,6 +5,7 @@ pipeline {
             steps {
               sh 'node --version'
               sh 'ls'
+              sh 'npm cache clean'
               sh 'npm install'
               sh 'node --max_old_space_size=8192 node_modules/.bin/ng build --no-progress --aot=true --target=production'
               sh 'npm install http-server'
