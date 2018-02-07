@@ -10,7 +10,7 @@
   "selenium": {
     "start_process": true,
     "server_path": "e2e-nightwatch/bin/selenium.jar",
-    "log_path": "e2e-nightwatch/selenium.log",
+    "log_path": "e2e-nightwatch",
     "port": 4444,
     "cli_args": {
       "webdriver.chrome.driver": "e2e-nightwatch/bin/chromedriver"
@@ -28,7 +28,7 @@
       "desiredCapabilities": {
         "browserName": "chrome",
         "chromeOptions": {
-          "args": ["disable-gpu", "no-sandbox"]
+          "args": ["disable-gpu", "no-sandbox", "verbose"]
         },
         "javascriptEnabled": true,
         "acceptSslCerts": true

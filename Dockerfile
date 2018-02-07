@@ -34,3 +34,5 @@ RUN /opt/google/chrome/google-chrome --version
 
 ENV CHROME_BIN /usr/bin/google-chrome
 
+ENV DBUS_SESSION_BUS_ADDRESS /dev/null
+
