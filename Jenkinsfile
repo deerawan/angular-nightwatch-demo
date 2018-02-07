@@ -16,7 +16,7 @@ pipeline {
           steps {
             sh 'npm run e2e-setup'
             sh 'cd e2e-nightwatch/bin && ls'
-            sh 'npm run e2e-nightwatch'
+            sh 'node_modules/.bin/ng e2e'
           }
         }
     }
