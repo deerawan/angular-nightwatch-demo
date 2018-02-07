@@ -28,7 +28,7 @@
       "desiredCapabilities": {
         "browserName": "chrome",
         "chromeOptions": {
-          "args": ["disable-gpu", "no-sandbox", "verbose"]
+          "args": ["disable-gpu", "no-sandbox", "verbose", "single-process", "headless"]
         },
         "javascriptEnabled": true,
         "acceptSslCerts": true
