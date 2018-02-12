@@ -1,11 +1,19 @@
 version: "2"
 services:
-  selenium:
-    image: selenium/standalone-chrome:3.8.1-francium
   atlas:
     build: .
-    image: atlas
+    image: atlas:2
     ports:
       - 4200:4200
-  depends_on:
-    - selenium_chrome
+    volumes:
+      - .:/code
+    depends_on:
+      - selenium
+    links:
+      - selenium
+  selenium:
+    image: selenium/standalone-chrome:3.8.1-francium
+    ports:
+      - 4444:4444
+    volumes:
+      - /dev/shm:/dev/shm

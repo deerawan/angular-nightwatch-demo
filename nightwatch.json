@@ -8,7 +8,7 @@
   "globals_path": "",
   "output_folder": "e2e-nightwatch/reports",
   "selenium": {
-    "start_process": true,
+    "start_process": false,
     "server_path": "e2e-nightwatch/bin/selenium.jar",
     "log_path": "e2e-nightwatch",
     "port": 4444,
@@ -18,12 +18,18 @@
   },
   "test_settings": {
     "default": {
-      "launch_url": "http://localhost:4200",
+      "launch_url": "http://172.22.0.3:4200",
       "selenium_port": 4444,
-      "selenium_host": "localhost",
+      "selenium_host": "selenium",
       "silent": true,
       "request_timeout_options": {
         "timeout": 30000
+      },
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "e2e-nightwatch/screenshots",
+        "on_failure": true,
+        "on_error": true
       },
       "desiredCapabilities": {
         "browserName": "chrome",

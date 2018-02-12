@@ -6,3 +6,6 @@ dist
 
 # nightwatch report result file
 reports
+
+# nightwatch screenshots
+screenshots
