@@ -1,4 +1,11 @@
 version: "2"
 services:
-  redis:
-    image: "redis:alpine"
+  selenium:
+    image: selenium/standalone-chrome:3.8.1-francium
+  atlas:
+    build: .
+    image: atlas
+    ports:
+      - 4200:4200
+  depends_on:
+    - selenium_chrome
