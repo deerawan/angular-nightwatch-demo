@@ -18,7 +18,7 @@
   },
   "test_settings": {
     "default": {
-      "launch_url": "http://172.22.0.3:4200",
+      "launch_url": "http://atlas:4200",
       "selenium_port": 4444,
       "selenium_host": "selenium",
       "silent": true,
