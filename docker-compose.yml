@@ -5,8 +5,6 @@ services:
     image: atlas:2
     ports:
       - 4200:4200
-    volumes:
-      - .:/code
     depends_on:
       - selenium
     links:
