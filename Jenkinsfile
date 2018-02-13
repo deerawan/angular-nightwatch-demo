@@ -10,7 +10,7 @@ pipeline {
         sh 'pwd'
         sh 'id -a'
         sh 'ls -l'
-        sh 'docker-compose up'
+        sh 'docker-compose up -d'
       }
     }
     stage('Test') {
