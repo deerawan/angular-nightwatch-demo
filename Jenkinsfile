@@ -22,7 +22,7 @@ pipeline {
 
   post {
     always {
-      sh 'docker-compose -f docker-compose.ci.yml down --remove-orphans --volumes'
+      sh 'docker-compose down --remove-orphans --volumes'
       cleanWs()
     }
   }
